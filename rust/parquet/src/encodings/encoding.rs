@@ -121,7 +121,7 @@ impl<T: DataType> PlainEncoder<T> {
         byte_buffer.set_data(vec);
         Self {
             buffer: byte_buffer,
-            bit_writer: BitWriter::new(256),
+            bit_writer: BitWriter::new(1024*1024),
             desc,
             _phantom: PhantomData,
         }
